@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+    <meta charset="utf-8">
+    <title>search</title>
+    <link href="./file/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1 class="headline">
+          <a>RBTI</a>
+        </h1>
+    </header>
+    <div class="register-parent">
+    <div class="register-form">
+        <h1 class="register">検索</h1>
+        <form action="/search" method="POST" enctype="multipart/form-data">
+            <p>
+                経験年数：
+                <select name="experience">
+                    <option value=""></option>
+                    <option value="beginer">初心者</option>
+                    <option value="oneyear">1年</option>
+                    <option value="twoyear">2年</option>
+                    <option value="threeyear">3年</option>
+                    <option value="fouryear">4年</option>
+                    <option value="fiveyear">5年</option>
+                    <option value="oversix">6年以上</option>
+                </select>
+            </p>
+            <p>
+                年齢：
+                <select name="age">
+                    <option value=""></option>
+                    <option value="ten">10代</option>
+                    <option value="twenty">20代</option>
+                    <option value="thirty">30代</option>
+                    <option value="fourty">40代</option>
+                    <option value="fifty">50代</option>
+                    <option value="sixty">60代以上</option>
+                </select>
+            </p>
+            <p>
+                方向性：
+                <select name="purpose" name="purpose">
+                    <option value=""></option>
+                    <option value="enjoy">エンジョイ</option>
+                    <option value="seriously">真面目に</option>
+                    <option value="professional">プロ志向</option>
+                </select>
+            </p>
+    
+            <p>
+                好きなアーティスト : <input type="text" name="NAME">
+            </p>
+    
+            <p><input type="submit" value="search"></p>
+        </form>
+    </div>
+    </div>
+    <footer>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a style="color: #d1d0d0;" href="./home">Home</a>
+            </li>
+            <li class="nav-list-item">
+                <a style="color: #ffffff;" href="./search">Search</a>
+            </li>
+            <li class="nav-list-item">
+                <a style="color: #d1d0d0;" href="./mypage">MyPage</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

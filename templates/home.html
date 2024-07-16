@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link href="../file/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1 class="headline">
+        <a>RBTI</a>
+        </h1>
+    </header>
+    <div class="container">
+        <div id="band-names-container"></div>
+
+        <div id="band-detail" style="display: none;">
+            <img src="../file/back.png" id="back">
+            <h2>バンド名:</h2>
+            <h4>MBTI:</h4>
+            <h4>経験年数:</h4>
+            <h4>年齢:</h4>
+            <h4>方向性:</h4>
+            <h4>好きなアーティスト:</h4>
+        </div>
+    </div>
+
+    <script>
+        // バンド名とマッチング率の配列
+        const bandNames = JSON.parse('{{ band | tojson | safe }}');
+        const mbti = JSON.parse('{{ mbti | tojson | safe }}');
+        const matchingRates = JSON.parse('{{ match | tojson | safe }}');
+
+        // コンテナ要素を取得
+        const container = document.getElementById('band-names-container');
+
+        // 各バンド名とマッチング率を表示する要素を作成してコンテナに追加
+        bandNames.forEach((bandName, index) => {
+            const bandItem = document.createElement('div');
+            bandItem.className = 'band-item';
+            bandItem.id = "band-item" + index;
+
+            const bandIcon = document.createElement('img');
+            bandIcon.className = 'band-icon';
+            bandIcon.src = "../file/user_icon.png";
+            
+            const bandElement = document.createElement('span');
+            bandElement.className = 'band-name';
+            bandElement.textContent = bandName;
+
+            const mbtiElement = document.createElement('span');
+            mbtiElement.className = 'mbti';
+            mbtiElement.textContent = `${mbti[index]}`;
+            
+            const matchingRateElement = document.createElement('span');
+            matchingRateElement.className = 'matching-rate';
+            matchingRateElement.textContent = `${matchingRates[index]}%`;
+            
+            bandItem.appendChild(bandIcon);
+            bandItem.appendChild(bandElement);
+            bandItem.appendChild(mbtiElement);
+            bandItem.appendChild(matchingRateElement);
+            container.appendChild(bandItem);
+        });
+
+        const band_detail = document.getElementById("band-detail");
+        const bandNamesElements = document.getElementsByClassName("band-name");
+
+        for (let i = 0; i < bandNamesElements.length; i++) {
+            bandNamesElements[i].addEventListener('click', function() {
+                console.log(bandNamesElements[i]);
+                band_detail.style.display = "block";
+            });
+        }
+
+        const back = document.getElementById("back");
+        back.addEventListener('click', function() {
+            console.log("clicked");
+            band_detail.style.display = "none";
+        });
+    </script>
+    <footer>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a style="color: #ffffff;" href="./home">Home</a>
+            </li>
+            <li class="nav-list-item">
+                <a style="color: #d1d0d0;" href="./search">Search</a>
+            </li>
+            <li class="nav-list-item">
+                <a style="color: #d1d0d0;" href="./mypage">MyPage</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

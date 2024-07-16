@@ -1,0 +1,123 @@
+body {
+    background-color: rgb(255, 246, 224);
+}
+* {
+    margin:0; padding:0;
+}
+header {
+    background-color: rgb(251, 208, 108);
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+header .headline{
+    font-size: 32px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.register {
+    height: 90px; 
+    text-align: center;
+}
+.register-parent {
+    padding: 20px;
+    height: 350px;
+}
+.register-form {
+    width: 300px;
+    height: 90px;
+    margin:  0 auto;
+}
+#format{
+    padding-left: 45px;
+}
+.ok {
+    margin : 30px 0px ;
+    width : 200px;
+}
+.search-parent {
+    background-color: #333;
+    padding: 20px;
+    height: 350px;
+}
+.search-form {
+    width: 200px;
+    height: 90px;
+    margin:  0 auto;
+}
+
+.band-item {
+    font-size: 1.5em;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+  }
+.band-name {
+    width : 300px;
+    height: 90px;   
+    margin: 30px 10px; 
+    vertical-align:  middle;
+    cursor: pointer;
+}
+
+.matching-rate {
+    height: 90px;   
+    margin: 30px 100px; 
+    vertical-align:  middle;
+}
+.mbti {
+    width : 100px;
+    height: 90px;   
+    margin: 30px 0px 30px 500px; 
+    vertical-align:  middle;
+}
+
+.mypage {
+    height : 50px; 
+    font-size: 1.5em;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.band-icon{
+    width : 15% ;
+    height: 10% ;
+    margin: 10px 50px; 
+}
+#band-detail{
+    display:none;
+    position: fixed;
+    margin: 50px 50px 10px 50px;
+    height : 60%;
+    width: 60%;
+    top: 70px;
+    left: 200px;
+    background-color: #f2f1f1;
+}
+#back{
+    width : 3% ;
+    height: 5% ;
+    margin: 10px 10px; 
+}
+.nav-list {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+.nav-list-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+

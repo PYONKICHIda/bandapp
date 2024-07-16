@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat App</title>
+    <link href="../file/DM_styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="app">
+        <div id="user-list">
+            <h2>DMリスト</h2>
+            <ul>
+                <li onclick="selectUser('user1')">ユーザー1</li>
+                <li onclick="selectUser('user2')">ユーザー2</li>
+                <li onclick="selectUser('user3')">ユーザー3</li>
+            </ul>
+        </div>
+        <div id="chat-container">
+            <div id="messages"></div>
+            <input type="text" id="message-input" placeholder="メッセージを入力してください">
+            <button id="send-button">送信</button>
+        </div>
+    </div>
+    <script src="../file/DM_script.js"></script>
+</body>
+</html>
